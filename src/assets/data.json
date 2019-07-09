@@ -1,0 +1,46 @@
+{
+     "root1": [
+          {
+               "category1": {
+                    "code": 1,
+                    "name": "Catergory #1",
+                    "products": [
+                         {"code": 1, "name": "Product #1", "price": 199.25},
+                         {"code": 2, "name": "Product #2", "price": 123.75},
+                         {"code": 3, "name": "Product #3", "price": 176.50}
+                    ]
+               },
+               "category2": {
+                    "code": 2,
+                    "name": "Catergory #2",
+                    "products": [
+                         {"code": 1, "name": "Product #1", "price": 199.25},
+                         {"code": 2, "name": "Product #2", "price": 123.75},
+                         {"code": 3, "name": "Product #3", "price": 176.50}
+                    ]
+               }
+          }
+     ],
+     "root2": [
+          {
+               "category1": {
+                    "code": 1,
+                    "name": "Catergory #1",
+                    "products": [
+                         {"code": 1, "name": "Product #1", "price": 199.25},
+                         {"code": 2, "name": "Product #2", "price": 123.75},
+                         {"code": 3, "name": "Product #3", "price": 176.50}
+                    ]
+               },
+               "category2": {
+                    "code": 2,
+                    "name": "Catergory #2",
+                    "products": [
+                         {"code": 1, "name": "Product #1", "price": 199.25},
+                         {"code": 2, "name": "Product #2", "price": 123.75},
+                         {"code": 3, "name": "Product #3", "price": 176.50}
+                    ]
+               }
+          }
+     ]
+}

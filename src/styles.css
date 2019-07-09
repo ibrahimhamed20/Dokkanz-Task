@@ -1,0 +1,15 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
+
+* {
+     font-family: 'Montserrat', sans-serif;
+}
+
+body {
+     font-family: 'Montserrat', sans-serif;
+     font-size: 18px;
+}
+
+.pagination {
+     display: inline-flex !important;
+}

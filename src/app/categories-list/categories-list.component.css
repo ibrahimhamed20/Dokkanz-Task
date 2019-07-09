@@ -1,0 +1,45 @@
+.pointer {
+     cursor: pointer !important;
+}
+
+.image-grid-cover {
+     width: 100%;
+     background-image: url(https://image.stern.de/8205460/16x9-940-529/3c6ed305ea6e6f63c0454fda4dbc5d02/hx/pic-grand-calfornia-2018--9-.jpg);
+     background-size: cover;
+     min-height: 180px;
+     position: relative;
+     margin-bottom: 30px;
+     text-shadow: rgba(0, 0, 0, .8) 0 1px 0;
+     border-radius: 4px;
+}
+
+.image-grid-clickbox {
+     position: absolute;
+     top: 0;
+     right: 0;
+     bottom: 0;
+     left: 0;
+     display: block;
+     width: 100%;
+     height: 100%;
+     z-index: 20;
+     background: rgba(0, 0, 0, .45);
+}
+
+.cover-wrapper {
+     font-size: 18px;
+     text-align: center;
+     display: block;
+     color: #fff;
+     text-shadow: rgba(0, 0, 0, .8) 0 1px 0;
+     z-index: 21;
+     position: relative;
+     top: 80px;
+}
+
+a,
+a:focus,
+a:hover {
+     text-decoration: none;
+     outline: 0;
+}

@@ -1,0 +1,85 @@
+<div class="container">
+     <h2 class="display-5 text-center my-4">Products Page of {{subCatObj.name}}</h2>
+     <button class="btn btn-primary pull-right mb-2" (click)="openModal(content, {});">
+          <i class="fa fa-plus-circle fa-lg"></i> Add
+     </button>
+     <table class="table table-bordered table-striped" [mfData]="products" #mf="mfDataTable" [mfRowsOnPage]="2">
+          <thead>
+               <tr>
+                    <th class="text-center" style="width: 20%">
+                         <mfDefaultSorter by="code">Code</mfDefaultSorter>
+                    </th>
+                    <th class="text-center" style="width: 40%">
+                         <mfDefaultSorter by="name">Name</mfDefaultSorter>
+                    </th>
+                    <th class="text-center" style="width: 20%">
+                         <mfDefaultSorter by="price">Price</mfDefaultSorter>
+                    </th>
+                    <th class="text-center" style="width: 10%">
+                         <mfDefaultSorter by="controls">Edit</mfDefaultSorter>
+                    </th>
+                    <th class="text-center" style="width: 10%">
+                         <mfDefaultSorter by="controls">
+                              <i class="btn btn-danger fa fa-trash mx-1" (click)="deleteProducts()" style="padding: 0px 7px;" aria-hidden="true"></i>
+                         </mfDefaultSorter>
+                    </th>
+               </tr>
+          </thead>
+          <tbody>
+               <tr *ngFor="let product of mf.data; index as i;">
+                    <td class="text-center">{{product.code}}</td>
+                    <td class="text-center">{{product.name}}</td>
+                    <td class="text-center">{{product.price}}</td>
+                    <td class="text-center">
+                         <i class="btn btn-info fa fa-pencil mx-1" (click)="openModal(content, product);" style="padding: 0px 7px;" aria-hidden="true"></i>
+                    </td>
+                    <td class="text-center">
+                         <div class="custom-control custom-checkbox">
+                              <input type="checkbox" class="custom-control-input" [(ngModel)]="product.check" [id]="i">
+                              <label class="custom-control-label" [for]="i"></label>
+                         </div>
+                    </td>
+               </tr>
+          </tbody>
+          <tfoot>
+               <tr>
+                    <td colspan="5" class="pb-0">
+                         <mfBootstrapPaginator [rowsOnPageSet]="[2,4,6,8,10]"></mfBootstrapPaginator>
+                    </td>
+               </tr>
+          </tfoot>
+     </table>
+     <a routerLink="/categories-list" class="btn btn-link">Back to Home</a>
+</div>
+
+
+
+<ng-template #content let-modal>
+     <div class="modal-header">
+          <h4 class="modal-title" id="modal-basic-title">Add product</h4>
+          <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+               <span aria-hidden="true">&times;</span>
+          </button>
+     </div>
+     <div class="modal-body">
+          <form [formGroup]="productForm">
+               <div class="form-group">
+                    <label for="name">#Name</label>
+                    <div class="input-group">
+                         <input id="name" type="text" class="form-control" placeholder="Enter Product Name ..."
+                              formControlName="name">
+                    </div>
+               </div>
+               <div class="form-group">
+                    <label for="price">#Price</label>
+                    <div class="input-group">
+                         <input id="price" type="number" class="form-control" placeholder="Enter Product Price ..."
+                              formControlName="price">
+                    </div>
+               </div>
+          </form>
+     </div>
+     <div class="modal-footer">
+          <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Save</button>
+     </div>
+</ng-template>
